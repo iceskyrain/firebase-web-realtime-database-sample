@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+<body>
+
+  <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+  <script >
+  
+  var config = {
+    databaseURL: "https://<YOUR URL>.firebasedatabase.app",
+  };
+    const app = firebase.initializeApp(config);
+
+
+   firebase.database().ref('person').set({
+      jeff : {
+        name: 'guest2',
+        age: 129
+      }
+    }).catch(function(error){
+      console.error(error);
+    });
+</script>
+
+</body>
+</html>
